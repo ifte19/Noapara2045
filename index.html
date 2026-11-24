@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noapara Master Plan 2045 – Interactive Map</title>
+<meta name="description" content="Interactive Final Proposed Land Use Master Plan 2045 for Noapara Satellite Growth Centre, Raozan, Chattogram: zones, circular CBD, plots by katha, FAR/MGC, roads, services, catchments.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23b2182b%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2222%22 fill=%22%233d9b45%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <header class="brand">
+      <div class="brand-row">
+        <div class="logo">N</div>
+        <div>
+          <h1>Noapara Master Plan 2045</h1>
+          <p>Satellite Growth Centre · Raozan, Chattogram</p>
+        </div>
+        <button id="collapse" class="icon-btn" title="Hide panel">⟨</button>
+      </div>
+      <nav id="tabs">
+        <button data-tab="overview" class="active">Overview</button>
+        <button data-tab="zones">Zones</button>
+        <button data-tab="cbd">CBD</button>
+        <button data-tab="plots">Plots</button>
+        <button data-tab="roads">Roads</button>
+        <button data-tab="services">Services</button>
+        <button data-tab="catch">Catchment</button>
+        <button data-tab="layers">Layers</button>
+        <button data-tab="data">Data</button>
+        <button data-tab="about">About</button>
+      </nav>
+    </header>
+    <div id="panes">
+      <section id="tab-overview" class="pane active"></section>
+      <section id="tab-zones" class="pane"></section>
+      <section id="tab-cbd" class="pane"></section>
+      <section id="tab-plots" class="pane"></section>
+      <section id="tab-roads" class="pane"></section>
+      <section id="tab-services" class="pane"></section>
+      <section id="tab-catch" class="pane"></section>
+      <section id="tab-layers" class="pane"></section>
+      <section id="tab-data" class="pane"></section>
+      <section id="tab-about" class="pane"></section>
+    </div>
+  </aside>
+  <main id="mapwrap">
+    <div id="map"></div>
+    <button id="expand" class="icon-btn floating" title="Show panel">⟩</button>
+    <div id="coords" class="glass"></div>
+    <div id="legend" class="glass"></div>
+    <div id="info" class="glass hidden">
+      <button id="info-close" class="icon-btn" title="Close">✕</button>
+      <div id="info-body"></div>
+    </div>
+  </main>
+</div>
+<script src="lib/leaflet/leaflet.js"></script>
+<script src="lib/proj4.js"></script>
+<script src="data/summary.js"></script>
+<script src="data/boundary.js"></script>
+<script src="data/zones.js"></script>
+<script src="data/landuse.js"></script>
+<script src="data/river.js"></script>
+<script src="data/water.js"></script>
+<script src="data/khas.js"></script>
+<script src="data/localroads.js"></script>
+<script src="data/roads.js"></script>
+<script src="data/roundabouts.js"></script>
+<script src="data/plots.js"></script>
+<script src="data/cbdsectors.js"></script>
+<script src="data/cbdplots.js"></script>
+<script src="data/cbdopen.js"></script>
+<script src="data/mlcp.js"></script>
+<script src="data/cbdpoints.js"></script>
+<script src="data/facilities.js"></script>
+<script src="data/catchments.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
